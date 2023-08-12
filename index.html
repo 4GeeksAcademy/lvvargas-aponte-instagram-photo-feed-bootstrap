@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Links to Bootstrap and Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- start adding new tags here -->
+  <!-- start of Navbar, button modal and dropdown menu -->
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="col">
+        <a class="navbar-brand d-flex" href="#">
+          <i class="fa-brands fa-instagram ms-5 my-1"></i>
+          <h5 class="ms-1">Instragram</h5>
+        </a>
+      </div>
+      <div class="col d-flex justify-content-end">
+        <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#newPost">Create a new
+          post</button>
+        <div class="dropdown me-5">
+          <button type="button" class="btn btn-secondary dropwdown-toggle me-5" data-bs-toggle="dropdown"><i
+              class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-caret-down ms-1"></i></button>
+          <ul class="dropdown-menu ">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <hr clas="border border-secondary border-1 opacity-50">
+            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal fade" id="newPost" tabindex="-1" aria-labelledby="newPostModal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="newPost">Create a new post</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label fw-bold">Caption:</label>
+                  <textarea class="form-control" id="message-text"
+                    placeholder="Add the caption of your post here"></textarea>
+                  <button type="button" class="btn btn-outline-secondary mt-3"><i
+                      class="fa-solid fa-camera"></i></button>
+                  <button type="button" class="btn btn-outline-secondary mt-3"><i
+                      class="fa-solid fa-location-dot"></i></button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Publish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End of navbar content -->
+
+  <!-- Start of page content -->
+  <div class="container text-center">
+    <!-- Nav/Tabs -->
+    <div class="row">
+      <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-tab-pane"
+            type="button" role="tab" aria-controls="grid-tab-pane" aria-selected="true"><i
+              class="fa-solid fa-table-cells"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="post-tab" data-bs-toggle="tab" data-bs-target="#post-tab-pane" type="button"
+            role="tab" aria-controls="post-tab-pane" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="grid-tab-pane" role="tabpanel" aria-labelledby="grid-tab"
+          tabindex="0">
+          <!-- Grid Post Content Area -->
+          <div class="row">
+            <div class="col p-1">
+              <div class="card">
+                <img src="https://picsum.photos/id/1062/200/200" class="img-fluid" alt="...">
+              </div>
+            </div>
+            <div class="col p-1">
+              <div class="card">
+                <img src="https://picsum.photos/id/590/200/200" class="img-fluid" alt="...">
+              </div>
+            </div>
+            <div class="col p-1">
+              <div class="col">
+                <div class="card">
+                  <img src="https://picsum.photos/id/436/200/200" class="img-fluid" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col p-1">
+              <div class="card">
+                <img src="https://picsum.photos/id/783/200/200" class="img-fluid" alt="...">
+              </div>
+            </div>
+            <div class="col p-1">
+              <div class="card">
+                <img src="https://picsum.photos/id/305/200/200" class="img-fluid" alt="...">
+              </div>
+            </div>
+            <div class="col p-1">
+              <div class="col">
+                <div class="card">
+                  <img src="https://picsum.photos/id/1000/200/200" class="img-fluid" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col p-1">
+              <div class="card">
+                <img src="https://picsum.photos/id/1020/200/200" class="img-fluid" alt="...">
+              </div>
+            </div>
+            <div class="col p-1">
+              <div class="card">
+                <img src="https://picsum.photos/id/78/200/200" class="img-fluid" alt="...">
+              </div>
+            </div>
+            <div class="col p-1">
+              <div class="col">
+                <div class="card">
+                  <img src="https://picsum.photos/id/505/200/200" class="img-fluid" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="post-tab-pane" role="tabpanel" aria-labelledby="post-tab" tabindex="0">
+        <!-- Single Post Content Area -->
+        <div class="containter">
+          <div class="row justify-content-center py-5 px-0">
+            <div class="card w-50 p-0 rounded-0" style="width: 18rem;">
+              <div class="card-header pt-0 bg-white">
+                <h3 class="float-start mt-3">My cute dog</h3>
+                <time class="float-end mt-3">08/26</time>
+              </div>
+              <img src="https://picsum.photos/id/1062/300/300" class="card-img-top rounded-0" alt="picture">
+              <div class="card-body text-start">
+                <strong> 1,000 Likes</strong>
+                <p class="card-text">This is an example of a photo for instagram.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center pb-5">
+            <div class="card w-50 p-0 rounded-0" style="width: 18rem;">
+              <div class="card-header pt-0 bg-white">
+                <h3 class="float-start mt-3">Festival Day!</h3>
+                <time class="float-end mt-3">07/05</time>
+              </div>
+              <img src="https://picsum.photos/id/590/300/300" class="card-img-top rounded-0" alt="picture">
+              <div class="card-body text-start">
+                <strong> 105 Likes</strong>
+                <p class="card-text">This is an example of a photo for instagram.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center pb-5">
+            <div class="card w-50 p-0 rounded-0" style="width: 18rem;">
+              <div class="card-header pt-0 bg-white">
+                <h3 class="float-start mt-3">Visit in San Fran</h3>
+                <time class="float-end mt-3">06/30</time>
+              </div>
+              <img src="https://picsum.photos/id/436/300/300" class="card-img-top rounded-0" alt="picture">
+              <div class="card-body text-start">
+                <strong> 100,000 Likes</strong>
+                <p class="card-text">This is an example of a photo for instagram.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!-- Scripts for Bootstrap with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
